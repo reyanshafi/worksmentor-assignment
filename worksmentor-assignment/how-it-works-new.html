@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How it works — Works Mentor (professional)</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    container: {
+                        center: true,
+                        padding: {
+                            DEFAULT: '1.25rem',
+                            sm: '2rem',
+                            lg: '3rem',
+                            xl: '4rem',
+                            '2xl': '5rem',
+                        },
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: '#1A56B1',
+                        'primary-hover': '#12408c',
+                        secondary: '#E3D64D',
+                        background: '#F8FAFC',
+                        surface: '#FFFFFF',
+                        border: '#E2E8F0',
+                        muted: '#64748B',
+                        foreground: '#0F172A',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        'floating': '0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.02)',
+                        'card': '0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0,0,0,0.03)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* mobile hamburger */
+        .hamburger {
+            width: 24px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: currentColor;
+            border-radius: 2px;
+            left: 0;
+            transition: all 0.25s ease-in-out;
+        }
+
+        .hamburger span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger span:nth-child(2) {
+            top: 9px;
+        }
+
+        .hamburger span:nth-child(3) {
+            top: 18px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            top: 9px;
+            transform: rotate(135deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            left: -20px;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            top: 9px;
+            transform: rotate(-135deg);
+        }
+
+        /* clean timeline line (desktop) */
+        .timeline-rule {
+            position: absolute;
+            left: 31px;
+            top: 12px;
+            bottom: 12px;
+            width: 2px;
+            background: #E2E8F0;
+            /* subtle grey line */
+        }
+    </style>
+</head>
+
+<body class="bg-background font-sans antialiased text-foreground">
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="fixed top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-border/70">
+        <div class="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <span class="text-2xl transition-transform group-hover:scale-105">🏠</span>
+                <div class="flex flex-col leading-none">
+                    <span class="text-xl font-extrabold text-primary tracking-tight">WORKS<span
+                            class="text-secondary">MENTOR</span></span>
+                    <span class="text-[0.65rem] font-medium text-muted uppercase tracking-wider">construction
+                        mentor</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center gap-7">
+                <a href="post-job.html"
+                    class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Post a job</a>
+                <a href="how-it-works.html" class="text-sm font-medium text-primary border-b-2 border-primary pb-1">How
+                    it works</a>
+                <a href="#" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Log in</a>
+                <a href="#"
+                    class="inline-flex items-center justify-center bg-primary text-white hover:bg-primary-hover text-sm font-semibold h-11 px-6 rounded-lg shadow-sm transition">Register
+                    free</a>
+            </div>
+
+            <button class="md:hidden p-2 text-slate-600 mobile-menu-btn">
+                <div class="hamburger"><span></span><span></span><span></span></div>
+            </button>
+        </div>
+        <div
+            class="hidden absolute top-20 left-0 w-full bg-white border-b border-border p-5 shadow-lg md:hidden flex-col gap-3 nav-links-mobile">
+            <a href="post-job.html" class="text-sm font-medium px-4 py-2 hover:bg-slate-50 rounded-md">Post a job</a>
+            <a href="how-it-works.html" class="text-sm font-medium px-4 py-2 bg-blue-50 text-primary rounded-md">How it
+                works</a>
+            <a href="#" class="text-sm font-medium px-4 py-2 hover:bg-slate-50 rounded-md">Log in</a>
+            <a href="#"
+                class="btn bg-primary text-white hover:bg-primary-hover text-center py-3 rounded-lg w-full">Register
+                free</a>
+        </div>
+    </nav>
+
+    <!-- ========== HERO (clean, minimal, professional) ========== -->
+    <section class="pt-32 pb-24 bg-white border-b border-border">
+        <div class="container mx-auto px-4 max-w-5xl text-center">
+            <span
+                class="text-sm font-semibold text-primary uppercase tracking-wider bg-blue-50 px-4 py-1.5 rounded-full inline-block mb-5">Simple
+                & transparent</span>
+            <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-5 tracking-tight">Hire trusted professionals
+                <br><span class="text-primary">in four straightforward steps</span>
+            </h1>
+            <p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">Post your job, compare quotes, and choose
+                the best expert — with full control and zero spam.</p>
+            <div class="flex flex-wrap gap-4 justify-center mt-10">
+                <a href="post-job.html"
+                    class="bg-primary text-white hover:bg-primary-hover font-semibold px-7 py-3.5 rounded-lg shadow-sm transition text-base">Start
+                    a project</a>
+                <a href="#steps"
+                    class="border border-border bg-white text-foreground hover:bg-slate-50 font-semibold px-7 py-3.5 rounded-lg transition text-base">Discover
+                    steps</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== STEPS SECTION (clean timeline, no heavy gradients) ========== -->
+    <section id="steps" class="py-20 bg-background">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <!-- subtle section label -->
+            <div class="text-center mb-14">
+                <span class="text-sm font-medium text-primary bg-blue-50/80 px-4 py-1.5 rounded-full">the process</span>
+                <h2 class="text-3xl font-bold text-foreground mt-5 mb-3">How Works Mentor works</h2>
+                <p class="text-muted text-lg">From job post to project done — we keep it professional.</p>
+            </div>
+
+            <!-- timeline container (relative) -->
+            <div class="relative">
+                <!-- vertical line (desktop) only visible on md and above -->
+                <div class="hidden md:block absolute left-[2.1rem] top-2 bottom-2 w-0.5 bg-border/70"></div>
+
+                <!-- STEP 1 -->
+                <div class="relative flex flex-col md:flex-row gap-6 md:gap-0 mb-12">
+                    <div class="md:w-20 flex-shrink-0 flex justify-start md:justify-center">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border-2 border-primary text-primary font-bold text-xl flex items-center justify-center shadow-sm z-10">
+                            1</div>
+                    </div>
+                    <div
+                        class="flex-1 bg-white p-7 rounded-xl border border-border shadow-card hover:shadow-soft transition">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-3xl">📋</span>
+                            <h3 class="text-2xl font-semibold text-foreground">Post your job</h3>
+                        </div>
+                        <p class="text-muted leading-relaxed">Describe your project, set your budget, and choose a
+                            category. Add photos or documents — it takes less than 5 minutes.</p>
+                        <div
+                            class="mt-4 flex items-center gap-2 text-sm bg-slate-50 p-3 rounded border border-border/60">
+                            <span
+                                class="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs">✓</span>
+                            <span class="text-slate-700"><span class="font-medium">Pro tip:</span> detailed descriptions
+                                attract better candidates</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="relative flex flex-col md:flex-row gap-6 md:gap-0 mb-12">
+                    <div class="md:w-20 flex-shrink-0 flex justify-start md:justify-center">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border-2 border-primary text-primary font-bold text-xl flex items-center justify-center shadow-sm z-10">
+                            2</div>
+                    </div>
+                    <div
+                        class="flex-1 bg-white p-7 rounded-xl border border-border shadow-card hover:shadow-soft transition">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-3xl">🔍</span>
+                            <h3 class="text-2xl font-semibold text-foreground">Receive quotes</h3>
+                        </div>
+                        <p class="text-muted leading-relaxed">Qualified professionals in your area review your job and
+                            send you detailed quotes — including price, timeline, and approach.</p>
+                        <div class="grid grid-cols-2 gap-3 mt-4">
+                            <div class="bg-slate-50 p-3 rounded border border-border/60 text-center">
+                                <span class="block text-xl font-bold text-primary">3–6</span>
+                                <span class="text-xs text-muted">avg. quotes per job</span>
+                            </div>
+                            <div class="bg-slate-50 p-3 rounded border border-border/60 text-center">
+                                <span class="block text-xl font-bold text-primary">
+                                    < 24h</span>
+                                        <span class="text-xs text-muted">first response</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 3 -->
+                <div class="relative flex flex-col md:flex-row gap-6 md:gap-0 mb-12">
+                    <div class="md:w-20 flex-shrink-0 flex justify-start md:justify-center">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border-2 border-primary text-primary font-bold text-xl flex items-center justify-center shadow-sm z-10">
+                            3</div>
+                    </div>
+                    <div
+                        class="flex-1 bg-white p-7 rounded-xl border border-border shadow-card hover:shadow-soft transition">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-3xl">⚖️</span>
+                            <h3 class="text-2xl font-semibold text-foreground">Compare & decide</h3>
+                        </div>
+                        <p class="text-muted leading-relaxed">Review profiles, ratings, and past work. Message
+                            candidates, ask questions — then choose the right fit. No obligation.</p>
+                        <div class="mt-4 space-y-2">
+                            <div class="flex items-center gap-2 text-sm"><span
+                                    class="text-primary text-base">✓</span><span class="text-slate-700">Verified
+                                    credentials & insurance</span></div>
+                            <div class="flex items-center gap-2 text-sm"><span
+                                    class="text-primary text-base">✓</span><span class="text-slate-700">Real client
+                                    reviews</span></div>
+                            <div class="flex items-center gap-2 text-sm"><span
+                                    class="text-primary text-base">✓</span><span class="text-slate-700">Fixed or hourly
+                                    quotes</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 4 -->
+                <div class="relative flex flex-col md:flex-row gap-6 md:gap-0">
+                    <div class="md:w-20 flex-shrink-0 flex justify-start md:justify-center">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border-2 border-secondary text-foreground font-bold text-xl flex items-center justify-center shadow-sm z-10">
+                            4</div>
+                    </div>
+                    <div
+                        class="flex-1 bg-white p-7 rounded-xl border border-border shadow-card hover:shadow-soft transition">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-3xl">🔨</span>
+                            <h3 class="text-2xl font-semibold text-foreground">Work begins & review</h3>
+                        </div>
+                        <p class="text-muted leading-relaxed">The pro starts your project. Once completed, leave a
+                            review to help the community. You’re always in control.</p>
+                        <div class="mt-4 bg-slate-50 p-4 rounded-lg border border-border/60 flex items-start gap-3">
+                            <span class="text-xl">🔒</span>
+                            <div><span class="font-medium block text-foreground">Privacy first</span><span
+                                    class="text-sm text-muted">Contact details are shared only with your chosen
+                                    professional.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== KEY FEATURES (quiet, credible) ========== -->
+    <section class="py-16 bg-white border-y border-border/70">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6">
+                    <span class="text-primary text-3xl block mb-3">✓</span>
+                    <h3 class="text-lg font-semibold text-foreground mb-2">No spam, only serious pros</h3>
+                    <p class="text-muted text-sm leading-relaxed">Every quote comes from screened professionals with
+                        active licenses and insurance.</p>
+                </div>
+                <div class="p-6">
+                    <span class="text-primary text-3xl block mb-3">🕒</span>
+                    <h3 class="text-lg font-semibold text-foreground mb-2">Average 4h to first quote</h3>
+                    <p class="text-muted text-sm leading-relaxed">Get responses quickly, often within hours — not days.
+                    </p>
+                </div>
+                <div class="p-6">
+                    <span class="text-primary text-3xl block mb-3">💬</span>
+                    <h3 class="text-lg font-semibold text-foreground mb-2">Direct messaging</h3>
+                    <p class="text-muted text-sm leading-relaxed">Discuss details, share files, and agree on scope
+                        before hiring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA (professional, not fancy) ========== -->
+    <section class="py-20 bg-background">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <span class="text-sm font-semibold text-primary bg-blue-50 px-4 py-1.5 rounded-full">start today</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mt-5 mb-4">Post a job — it’s free</h2>
+            <p class="text-lg text-muted mb-8">Thousands of projects posted every week. Find your expert now.</p>
+            <a href="post-job.html"
+                class="inline-flex items-center bg-primary text-white hover:bg-primary-hover font-semibold px-8 py-4 rounded-lg shadow-sm transition text-lg">Post
+                your job</a>
+            <p class="text-xs text-muted mt-5">No credit card required • 100% free for clients</p>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-white border-t border-border py-8">
+        <div
+            class="container mx-auto px-4 max-w-7xl flex flex-col md:flex-row justify-between items-center text-sm text-muted">
+            <span>© 2026 Works Mentor India Pvt Ltd</span>
+            <div class="flex gap-6 mt-3 md:mt-0">
+                <a href="#" class="hover:text-primary transition">Terms</a>
+                <a href="#" class="hover:text-primary transition">Privacy</a>
+                <a href="#" class="hover:text-primary transition">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // mobile menu
+        const btn = document.querySelector('.mobile-menu-btn');
+        const menu = document.querySelector('.nav-links-mobile');
+        const hamburger = document.querySelector('.hamburger');
+        if (btn) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('flex');
+                hamburger.classList.toggle('active');
+            });
+        }
+        // smooth scroll (internal anchor)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === "#" || !href) return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

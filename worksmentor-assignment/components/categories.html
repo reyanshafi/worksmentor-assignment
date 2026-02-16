@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Categories — Works Mentor (refined)</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: '#1A56B1',
+                        'primary-hover': '#12408c',
+                        secondary: '#E3D64D',
+                        background: '#F8FAFC',
+                        surface: '#FFFFFF',
+                        border: '#E2E8F0',
+                        muted: '#64748B',
+                        foreground: '#0F172A',
+                    },
+                    boxShadow: {
+                        'card': '0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0,0,0,0.03)',
+                        'card-hover': '0 20px 30px -10px rgba(26, 86, 177, 0.12), 0 8px 12px -6px rgba(0, 0, 0, 0.02)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* fade/slide animations (optional) */
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-up {
+            animation: slideUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+    </style>
+</head>
+
+<body class="bg-background font-sans antialiased text-foreground">
+
+    <!-- ===== REDESIGNED POPULAR CATEGORIES (professional, balanced, no issues) ===== -->
+    <section id="categories" class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-4 max-w-7xl">
+
+            <!-- Section header (cleaner, more refined) -->
+            <div class="text-center mb-16 fade-in">
+                <span
+                    class="inline-block py-1.5 px-4 rounded-full bg-primary/5 text-primary text-xs font-semibold uppercase tracking-wider mb-4 border border-primary/10">find
+                    your niche</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight slide-up delay-100">
+                    Explore popular categories</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto slide-up delay-200">From residential renovations to
+                    commercial electrical work — discover projects that match your expertise.</p>
+            </div>
+
+            <!-- Category grid: 8 cards, consistent design, improved hover states -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+
+                <!-- Painting (primary blue) -->
+                <a href="projects.html"
+                    class="group relative bg-white p-7 rounded-2xl border border-border/80 shadow-card hover:shadow-card-hover transition-all duration-200 hover:-translate-y-1">
+                    <div class="flex items-start justify-between mb-5">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-primary/5 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-200">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-3M9.707 3.293l3 3a1 1 0 010 1.414l-9 9a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414l9-9a1 1 0 011.414 0z" />
+                            </svg>
+                        </div>
+                        <span
+                            class="inline-flex items-center gap-1 text-xs font-medium text-primary bg-primary/5 px-3 py-1 rounded-full">120+
+                            leads</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-2 group-hover:text-primary transition-colors">
+                        Painting</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-5">Interior, exterior, texture & waterproofing.
+                        Residential & commercial.</p>
+                    <div
+                        class="flex items-center text-sm font-semibold text-primary opacity-0 group-hover:opacity-100 transition-all translate-x-[-8px] group-hover:translate-x-0">
+                        Explore <span class="ml-2 text-lg leading-none">→</span>
+                    </div>
+                </a>
+
+                <!-- Renovation (warm orange) -->
+                <a href="projects.html"
+                    class="group relative bg-white p-7 rounded-2xl border border-border/80 shadow-card hover:shadow-card-hover transition-all duration-200 hover:-translate-y-1">
+                    <div class="flex items-start justify-between mb-5">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center group-hover:bg-orange-600 group-hover:text-white transition-colors duration-200">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <span
+                            class="inline-flex items-center gap-1 text-xs font-medium text-orange-600 bg-orange-50 px-3 py-1 rounded-full">85+
+                            leads</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+                        Renovation</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-5">Full home remodels, kitchen & bath upgrades,
+                        structural changes.</p>
+                    <div
+                        class="flex items-center text-sm font-semibold text-orange-600 opacity-0 group-hover:opacity-100 transition-all translate-x-[-8px] group-hover:translate-x-0">
+                        Explore <span class="ml-2 text-lg leading-none">→</span>
+                    </div>
+                </a>
+
+                <!-- Electrical (green) -->
+                <a href="projects.html"
+                    class="group relative bg-white p-7 rounded-2xl border border-border/80 shadow-card hover:shadow-card-hover transition-all duration-200 hover:-translate-y-1">
+                    <div class="flex items-start justify-between mb-5">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-green-50 text-green-600 flex items-center justify-center group-hover:bg-green-600 group-hover:text-white transition-colors duration-200">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <span
+                            class="inline-flex items-center gap-1 text-xs font-medium text-green-600 bg-green-50 px-3 py-1 rounded-full">210+
+                            leads</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-2 group-hover:text-green-600 transition-colors">
+                        Electrical</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-5">Wiring, lighting, panels, smart home & safety
+                        inspections.</p>
+                    <div
+                        class="flex items-center text-sm font-semibold text-green-600 opacity-0 group-hover:opacity-100 transition-all translate-x-[-8px] group-hover:translate-x-0">
+                        Explore <span class="ml-2 text-lg leading-none">→</span>
+                    </div>
+                </a>
+
+                <!-- Plumbing (purple) -->
+                <a href="projects.html"
+                    class="group relative bg-white p-7 rounded-2xl border border-border/80 shadow-card hover:shadow-card-hover transition-all duration-200 hover:-translate-y-1">
+                    <div class="flex items-start justify-between mb-5">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors duration-200">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a2 2 0 00-1.96 1.414l-.703 2.108a2 2 0 01-.273.462 2 2 0 01-.462.273L10.5 19.5a2 2 0 01-2.108-.703l-2.108-.703a2 2 0 00-1.414 1.96l.477 2.387a2 2 0 001.569 1.569l2.387.477a2 2 0 01.462.273l.703 2.108" />
+                            </svg>
+                        </div>
+                        <span
+                            class="inline-flex items-center gap-1 text-xs font-medium text-purple-600 bg-purple-50 px-3 py-1 rounded-full">140+
+                            leads</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-2 group-hover:text-purple-600 transition-colors">
+                        Plumbing</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-5">Pipe fitting, leak repairs, water heaters,
+                        industrial systems.</p>
+                    <div
+                        class="flex items-center text-sm font-semibold text-purple-600 opacity-0 group-hover:opacity-100 transition-all translate-x-[-8px] group-hover:translate-x-0">
+                        Explore <span class="ml-2 text-lg leading-none">→</span>
+                    </div>
+                </a>
+
+                <!-- Flooring (slate) -->
+                <a href="projects.html"
+                    class="group relative bg-white p-7 rounded-2xl border border-border/80 shadow-card hover:shadow-card-hover transition-all duration-200 hover:-translate-y-1">
+                    <div class="flex items-start justify-between mb-5">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-slate-100 text-slate-600 flex items-center justify-center group-hover:bg-slate-600 group-hover:text-white transition-colors duration-200">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                            </svg>
+                        </div>
+                        <span
+                            class="inline-flex items-center gap-1 text-xs font-medium text-slate-600 bg-slate-100 px-3 py-1 rounded-full">95+
+                            leads</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-2 group-hover:text-slate-600 transition-colors">
+                        Flooring</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-5">Marble, granite, tiles, hardwood, polishing &
+                        installation.</p>
+                    <div
+                        class="flex items-center text-sm font-semibold text-slate-600 opacity-0 group-hover:opacity-100 transition-all translate-x-[-8px] group-hover:translate-x-0">
+                        Explore <span class="ml-2 text-lg leading-none">→</span>
+                    </div>
+                </a>
+
+                <!-- Roofing (red) -->
+                <a href="projects.html"
+                    class="group relative bg-white p-7 rounded-2xl border border-border/80 shadow-card hover:shadow-card-hover transition-all duration-200 hover:-translate-y-1">
+                    <div class="flex items-start justify-between mb-5">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-red-50 text-red-600 flex items-center justify-center group-hover:bg-red-600 group-hover:text-white transition-colors duration-200">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                        </div>
+                        <span
+                            class="inline-flex items-center gap-1 text-xs font-medium text-red-600 bg-red-50 px-3 py-1 rounded-full">65+
+                            leads</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-2 group-hover:text-red-600 transition-colors">Roofing
+                    </h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-5">Industrial sheds, waterproofing, clay tile, &
+                        repairs.</p>
+                    <div
+                        class="flex items-center text-sm font-semibold text-red-600 opacity-0 group-hover:opacity-100 transition-all translate-x-[-8px] group-hover:translate-x-0">
+                        Explore <span class="ml-2 text-lg leading-none">→</span>
+                    </div>
+                </a>
+
+                <!-- Interior (indigo) -->
+                <a href="projects.html"
+                    class="group relative bg-white p-7 rounded-2xl border border-border/80 shadow-card hover:shadow-card-hover transition-all duration-200 hover:-translate-y-1">
+                    <div class="flex items-start justify-between mb-5">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-200">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                            </svg>
+                        </div>
+                        <span
+                            class="inline-flex items-center gap-1 text-xs font-medium text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">170+
+                            leads</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
+                        Interior</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-5">False ceilings, wall decor, complete design &
+                        execution.</p>
+                    <div
+                        class="flex items-center text-sm font-semibold text-indigo-600 opacity-0 group-hover:opacity-100 transition-all translate-x-[-8px] group-hover:translate-x-0">
+                        Explore <span class="ml-2 text-lg leading-none">→</span>
+                    </div>
+                </a>
+
+                <!-- Carpentry (amber) -->
+                <a href="projects.html"
+                    class="group relative bg-white p-7 rounded-2xl border border-border/80 shadow-card hover:shadow-card-hover transition-all duration-200 hover:-translate-y-1">
+                    <div class="flex items-start justify-between mb-5">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition-colors duration-200">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                            </svg>
+                        </div>
+                        <span
+                            class="inline-flex items-center gap-1 text-xs font-medium text-amber-600 bg-amber-50 px-3 py-1 rounded-full">110+
+                            leads</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
+                        Carpentry</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-5">Custom furniture, wardrobes, modular kitchens
+                        & woodwork.</p>
+                    <div
+                        class="flex items-center text-sm font-semibold text-amber-600 opacity-0 group-hover:opacity-100 transition-all translate-x-[-8px] group-hover:translate-x-0">
+                        Explore <span class="ml-2 text-lg leading-none">→</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- subtle bottom CTA (optional) -->
+            <div class="text-center mt-14">
+                <a href="projects.html"
+                    class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
+                    <span>Browse all categories</span>
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- spacer -->
+    <div class="h-20 bg-slate-50"></div>
+</body>
+
+</html>

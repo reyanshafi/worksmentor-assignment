@@ -1,0 +1,33 @@
+Work Mentor India Private Limited
+WORKSMENTOR
+Detailed Candidate Assignment Document
+Reference Website: worksmentor.com
+Submission Deadline: Within 24 Hours
+Access Limitation: Public website access only (No admin/dashboard access)
+
+Work Mentor India Private Limited
+DOCUMENT 2: Frontend Developer Assignment
+Objective
+Improve the UI of the public website and implement one meaningful frontend enhancement
+without backend or admin access.
+Part 1 – UI Improvement
+ Select ONE page: Homepage, Project Listing Page, or Contact Page.
+ Improve spacing and alignment consistency.
+ Enhance typography hierarchy and readability.
+ Refine buttons, cards, and hover states.
+ Improve mobile responsiveness and layout consistency.
+ Ensure clean and maintainable CSS structure.
+Part 2 – Implement One Frontend Feature (No Backend Required)
+ Add Sorting functionality (static demo acceptable).
+ OR Add Filter UI (Budget/Location – frontend only).
+ OR Improve Navbar with sticky behavior and better mobile menu.
+ OR Add smooth animations and transitions.
+ OR Improve form validation UI feedback.
+Deliverables – Frontend
+ Updated code (GitHub repository link or ZIP file).
+ Before & After screenshots.
+ Short explanation document covering improvements and UX reasoning.
+Evaluation Criteria: Code quality, UI enhancement quality, responsiveness, logical
+implementation, problem-solving approach, and timely delivery.
+
+
