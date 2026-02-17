@@ -29,7 +29,7 @@ One of the biggest gaps in the legacy experience was the lack of a clear, compre
 
 - **New Support Ecosystem**: We didn't just tweak a page; we **created a dedicated Contact Center** (`contact.html`) from the ground up.
 - **Categorized Support**: Instead of a long list of phone numbers, we created structured data sections for:
-    - Railway Support (India & International)
+    - Railway Support 
     - Loyalty Partners (SBI, BOB, HDFC, RBL)
     - Office Locations
 - **Clear Instructions**: Provided step-by-step guidance on how to reach different departments, including a modern **Direct Message Form** that was missing from the original site.
@@ -37,7 +37,6 @@ One of the biggest gaps in the legacy experience was the lack of a clear, compre
 ---
 
 ## 4. Navigation & Branding (Header/Footer)
-- **Branding**: The original header lacked a modern identity. We added a **Premium Glassmorphism Logo** with "NextGen 2.0" branding to establish a new creative direction.
 - **Header Structure**: Cleaned up the navigation links to remove ambiguity. The header is now sticky, ensuring the "Contact" and "Services" links are always within reach.
 - **Professional Footer**: Replaced the old-school copyright bar with a massive, multi-column utility footer that credits the redesign and provides better site discoverability.
 
